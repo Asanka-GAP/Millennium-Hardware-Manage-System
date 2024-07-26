@@ -38,7 +38,7 @@ public class RentalController {
         return service.deleteRental(id);
     }
 
-    @PutMapping("/rental/{rental_id}/{customer_id}")
+    @GetMapping("/rental/{rental_id}/{customer_id}")
     Rental assignCustomer(@PathVariable Long rental_id,@PathVariable Long customer_id){
         return service.assignCustomer(rental_id,customer_id);
     }
