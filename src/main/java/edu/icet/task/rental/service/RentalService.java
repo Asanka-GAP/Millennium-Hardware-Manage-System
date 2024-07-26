@@ -14,4 +14,6 @@ public interface RentalService {
     Rental updateRental(Rental rental);
 
     boolean deleteRental(Long id);
+
+    Rental assignCustomer(Long rentalId, Long customerId);
 }

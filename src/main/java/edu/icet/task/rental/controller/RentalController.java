@@ -1,6 +1,5 @@
 package edu.icet.task.rental.controller;
 
-import edu.icet.task.customer.model.Customer;
 import edu.icet.task.rental.model.Rental;
 import edu.icet.task.rental.service.RentalService;
 import lombok.RequiredArgsConstructor;
@@ -37,5 +36,10 @@ public class RentalController {
     @DeleteMapping("rental/delete/{id}")
     boolean deleteRental(@PathVariable Long id){
         return service.deleteRental(id);
+    }
+
+    @PutMapping("/rental/{rental_id}/{customer_id}")
+    Rental assignCustomer(@PathVariable Long rental_id,@PathVariable Long customer_id){
+        return service.assignCustomer(rental_id,customer_id);
     }
 }

@@ -1,6 +1,8 @@
 package edu.icet.task.rental.service.impl;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import edu.icet.task.customer.entity.CustomerEntity;
+import edu.icet.task.customer.repository.CustomerRepository;
 import edu.icet.task.rental.entity.RentalEntity;
 import edu.icet.task.rental.model.Rental;
 import edu.icet.task.rental.repository.RentalRepository;
@@ -16,6 +18,9 @@ public class RentalServiceImpl implements RentalService {
 
     @Autowired
     private RentalRepository repository;
+
+    @Autowired
+    private CustomerRepository customerRepository;
 
     @Autowired
     ObjectMapper mapper;
@@ -59,5 +64,17 @@ public class RentalServiceImpl implements RentalService {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public Rental assignCustomer(Long rentalId, Long customerId) {
+        CustomerEntity customerEntity = customerRepository.findById(customerId).get();
+        RentalEntity rentalEntity = repository.findById(rentalId).get();
+
+        rentalEntity.setCustomer(customerEntity);
+
+        RentalEntity saved = repository.save(rentalEntity);
+        return mapper.convertValue(saved, Rental.class);
+
     }
 }

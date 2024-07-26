@@ -1,5 +1,6 @@
 package edu.icet.task.rental.entity;
 
+import edu.icet.task.customer.entity.CustomerEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,7 +17,11 @@ public class RentalEntity {
     private Long id;
     private String rentalDate;
     private String returnDate;
-    private Integer dueDate;
+    private String dueDate;
     private Long totalCost;
     private Long fine;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "cus_id",referencedColumnName = "id")
+    private CustomerEntity customer;
 }
