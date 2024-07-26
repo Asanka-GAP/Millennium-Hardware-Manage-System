@@ -5,17 +5,24 @@ import edu.icet.task.hardwareItem.entity.ItemEntity;
 import edu.icet.task.hardwareItem.model.Item;
 import edu.icet.task.hardwareItem.repository.ItemRepository;
 import edu.icet.task.hardwareItem.service.ItemService;
+import edu.icet.task.rental.entity.RentalEntity;
+import edu.icet.task.rental.repository.RentalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class ItemServiceImpl implements ItemService {
 
     @Autowired
     private ItemRepository repository;
+
+    @Autowired
+    private RentalRepository rentalRepository;
 
     @Autowired
     ObjectMapper mapper;
@@ -59,5 +66,25 @@ public class ItemServiceImpl implements ItemService {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public Item enrollToRental(Long itemId, Long rentalId) {
+        ItemEntity itemEntity = null;
+        RentalEntity rentalEntity = null;
+        if (repository.existsById(itemId)){
+            itemEntity = repository.findById(itemId).get();
+        }
+        if (rentalRepository.existsById(rentalId)){
+            rentalEntity = rentalRepository.findById(rentalId).get();
+        }
+
+        Set<RentalEntity> rentals= new HashSet<>();
+        rentals.add(rentalEntity);
+        itemEntity.setBelongRental(rentals);
+
+        ItemEntity saved = repository.save(itemEntity);
+
+        return mapper.convertValue(saved,Item.class);
     }
 }

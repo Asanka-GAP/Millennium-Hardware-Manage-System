@@ -14,4 +14,6 @@ public interface ItemService {
     Item updateItem(Item item);
 
     boolean deleteItem(Long id);
+
+    Item enrollToRental(Long itemId, Long rentalId);
 }

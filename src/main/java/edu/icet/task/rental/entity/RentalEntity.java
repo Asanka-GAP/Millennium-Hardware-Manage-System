@@ -1,10 +1,15 @@
 package edu.icet.task.rental.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import edu.icet.task.customer.entity.CustomerEntity;
+import edu.icet.task.hardwareItem.entity.ItemEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @AllArgsConstructor
@@ -24,4 +29,8 @@ public class RentalEntity {
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "cus_id",referencedColumnName = "id")
     private CustomerEntity customer;
+
+    @JsonIgnore
+    @ManyToMany(mappedBy = "belongRental")
+    private Set<ItemEntity> items = new HashSet<>();
 }

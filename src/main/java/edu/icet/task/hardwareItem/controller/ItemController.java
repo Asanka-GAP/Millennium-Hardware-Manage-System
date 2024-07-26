@@ -1,6 +1,7 @@
 package edu.icet.task.hardwareItem.controller;
 
 import edu.icet.task.customer.model.Customer;
+import edu.icet.task.hardwareItem.entity.ItemEntity;
 import edu.icet.task.hardwareItem.model.Item;
 import edu.icet.task.hardwareItem.service.ItemService;
 import lombok.RequiredArgsConstructor;
@@ -37,5 +38,10 @@ public class ItemController {
     @DeleteMapping("item/delete/{id}")
     boolean deleteItem(@PathVariable Long id){
         return service.deleteItem(id);
+    }
+
+    @PutMapping("/item/{item_id}/{rental_id}")
+    Item enrollToRental(@PathVariable Long item_id, @PathVariable Long rental_id){
+        return service.enrollToRental(item_id,rental_id);
     }
 }
