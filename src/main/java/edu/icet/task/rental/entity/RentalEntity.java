@@ -16,7 +16,6 @@ public class RentalEntity {
     private Long id;
     private String rentalDate;
     private String returnDate;
-    private String returnedDate;
     private Integer dueDate;
     private Long totalCost;
     private Long fine;
