@@ -80,3 +80,15 @@ Q.idea/sonarlint/securityhotspotstore/9/f/9f341beb924e399cd5ba6c6cf6ffe6df9fdc7e
 Q.idea/sonarlint/securityhotspotstore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302,3\0\30205a209c6ce77c4cfc19a09e6f57c588b7fb88
 w
 G.idea/sonarlint/issuestore/c/1/c1c2763727607e1cb23026f53bfb3366c1367c54,e\b\eba209842bb22f1594f5a89ba599f6dbb5b0a483
+w
+Gsrc/main/java/edu/icet/task/hardwareItem/repository/ItemRepository.java,3\7\37dace37a0ca6b307a1b7b88c0590132421bd860
+o
+?src/main/java/edu/icet/task/hardwareItem/entity/ItemEntity.java,6\b\6b8e5e5fb299ebc95f6e8af831b3577a90636e49
+h
+8src/main/java/edu/icet/task/hardwareItem/model/Item.java,8\8\8841a94d5320b9c3f11011f4a3e624fae9c7fd16
+q
+Asrc/main/java/edu/icet/task/hardwareItem/service/ItemService.java,0\b\0b412000555b353ecc10157a7ef11ba86b7f6e4f
+z
+Jsrc/main/java/edu/icet/task/hardwareItem/service/impl/ItemServiceImpl.java,6\d\6d84726d2bf984a2f04b1473857ffe44dedb72b7
+w
+Gsrc/main/java/edu/icet/task/hardwareItem/controller/ItemController.java,6\a\6a95d1057917a5a7d30b36b20994b83da5de888b
