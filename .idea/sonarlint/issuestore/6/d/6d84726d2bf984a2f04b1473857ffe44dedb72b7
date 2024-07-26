@@ -1,0 +1,18 @@
+
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ñÀýö8˜Ö±õŽ2J$48b85153-e8e3-4e44-8fd2-9889e764411d
+‹
+java:S2259T"HA "NullPointerException" could be thrown; "itemEntity" is nullable here.(‡‚ƒŸ8©Ö±õŽ2J$34eaa553-e6f1-460a-9ef2-462ef81c6d47
+˜
+java:S36551"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Â¶²•ùÿÿÿÿ8ªÖ±õŽ2J$537c1174-aee9-45e5-abaf-0b5b6f38dc40
+“
+java:S3655L"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(“ž¦£8ªÖ±õŽ2J$d759a5b0-bf39-4a1b-856b-ed838631044a
+˜
+java:S3655O"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÂÞûœûÿÿÿÿ8©Ö±õŽ2J$2b0443d7-c2e5-426b-9d0e-43fa16baf74f
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8«Ö±õŽ2J$71666ab9-62c5-4562-846b-10fd84b98312
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8¬Ö±õŽ2J$1f220337-8e3c-49df-a59e-edcf129bbee1
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8¬Ö±õŽ2J$9cc12f8b-3852-4f07-8dbf-9f0172d099fe
+o
+java:S1602)",Remove useless curly braces around statement(ËÝÙ©8³Ö±õŽ2J$c71a26b2-2fa0-468b-b78e-f4900ca2dbd8

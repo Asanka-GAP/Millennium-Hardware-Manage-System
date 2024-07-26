@@ -1,0 +1,8 @@
+
+˜	java:S117,"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡ú—¡ÿÿÿÿÿ8şœõ2J$8be819d5-fb76-404a-81c6-82ff350ecbfb
+˜	java:S117,"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡ú—¡ÿÿÿÿÿ8ÿœõ2J$bb8a453e-dbd0-457b-83d0-fbe9406716aa
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÿŞÁ¶øÿÿÿÿ8£Ëäî2J$203bcfff-3ab7-44b9-a720-a762e0bb0f15
+_
+java:S1128"BRemove this unused import 'edu.icet.task.customer.model.Customer'.(Áœ•8¸Îõ2
+f
+java:S1128"IRemove this unused import 'edu.icet.task.hardwareItem.entity.ItemEntity'.(ƒ™òğ8¹Îõ2
